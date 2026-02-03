@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artem Lemeshev — Unity Developer / Tech Lead</title>
+  <meta name="description" content="Unity Developer & Tech Lead. Mobile/WebGL games, gameplay systems, performance, and backend with ASP.NET Core." />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Artem Lemeshev — Unity Developer / Tech Lead" />
+  <meta property="og:description" content="Mobile & WebGL games end-to-end. Unity architecture, gameplay, performance. Backend services with ASP.NET Core." />
+  <meta property="og:type" content="website" />
+  <!-- TODO (optional): add og:image when you have one -->
+  <!-- <meta property="og:image" content="https://your-domain.com/og.png" /> -->
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root { --radius: 18px; }
+    body { scroll-behavior: smooth; }
+    .hero {
+      background:
+        radial-gradient(1200px 600px at 15% 10%, rgba(13,110,253,.20), transparent 60%),
+        radial-gradient(1000px 500px at 90% 30%, rgba(25,135,84,.15), transparent 55%),
+        radial-gradient(900px 450px at 40% 95%, rgba(111,66,193,.12), transparent 55%);
+    }
+    .glass {
+      background: rgba(255,255,255,.78);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: var(--radius);
+    }
+    .section { padding: 72px 0; }
+    .muted { color: rgba(0,0,0,.65); }
+    .chip {
+      display:inline-flex; align-items:center; gap:.45rem;
+      padding:.35rem .7rem; border-radius: 999px;
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.9);
+      font-size:.9rem;
+      margin:.25rem .25rem 0 0;
+      user-select:none;
+    }
+    .anchor-offset { scroll-margin-top: 86px; }
+    .project-card { border-radius: var(--radius); }
+    .project-meta { font-size: .92rem; }
+    .kicker { letter-spacing: .04em; text-transform: uppercase; font-weight: 700; font-size:.78rem; color: rgba(0,0,0,.55); }
+    .lang-pill .btn { border-radius: 999px; }
+    .small-links a { text-decoration: none; }
+    .small-links a:hover { text-decoration: underline; }
+    .tag-unity { background: rgba(13,110,253,.10); border-color: rgba(13,110,253,.25); }
+    .tag-backend { background: rgba(25,135,84,.10); border-color: rgba(25,135,84,.25); }
+
+    /* Fix vertical centering for buttons with icons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#top">Artem Lemeshev</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto me-3">
+          <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav.skills">Навички</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav.projects">Проєкти</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contacts">Контакти</a></li>
+        </ul>
+
+        <!-- Language toggle -->
+        <div class="btn-group lang-pill" role="group" aria-label="Language">
+          <button class="btn btn-outline-dark btn-sm" id="btnUk">UA</button>
+          <button class="btn btn-outline-dark btn-sm" id="btnEn">EN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="top" class="hero">
+    <div class="container section">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-7">
+          <div class="glass p-4 p-md-5 h-100">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <img
+                src="assets/avatar.jpg"
+                alt="Artem Lemeshev"
+                class="rounded-circle border"
+                style="width:72px;height:72px;object-fit:cover;"
+              />
+              <div>
+                <div class="d-flex align-items-center flex-wrap gap-2">
+                  <div class="kicker" data-i18n="hero.kicker">Unity • Mobile • WebGL • Tech Lead</div>
+                  <span class="badge rounded-pill text-bg-primary" data-i18n="hero.expBadge">12+ years Unity (commercial)</span>
+                </div>
+                <div class="muted small" data-i18n="hero.subtitle">Unity Developer / Tech Lead</div>
+              </div>
+            </div>
+
+            <h1 class="display-6 fw-bold mb-3">
+              <span data-i18n="hero.title">Unity Developer & Tech Lead</span>
+            </h1>
+
+            <p class="lead mb-3" data-i18n="hero.about">
+              Unity developer and Tech Lead with hands-on experience in building mobile and WebGL games end-to-end.
+              I specialize in client-side architecture, gameplay systems, and performance optimization in Unity,
+              while also working on backend services using ASP.NET Core. Experienced in leading development teams and delivering
+              scalable, maintainable products.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+              <span class="chip tag-unity"><i class="bi bi-controller"></i><span data-i18n="hero.focus1">Client architecture</span></span>
+              <span class="chip tag-unity"><i class="bi bi-lightning-charge"></i><span data-i18n="hero.focus2">Gameplay & performance</span></span>
+              <span class="chip tag-backend"><i class="bi bi-server"></i><span data-i18n="hero.focus3">ASP.NET Core as a plus</span></span>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-primary btn-lg" href="#projects">
+                <i class="bi bi-grid-3x3-gap me-2"></i><span data-i18n="hero.ctaProjects">Проєкти</span>
+              </a>
+              <a class="btn btn-outline-dark btn-lg" href="#contact">
+                <i class="bi bi-send me-2"></i><span data-i18n="hero.ctaContact">Звʼязатись</span>
+              </a>
+              <a class="btn btn-outline-primary btn-lg" href="assets/Artem_Lemeshov_CV.pdf" target="_blank" rel="noreferrer">
+                <i class="bi bi-file-earmark-text me-2"></i><span data-i18n="hero.ctaCV">Download CV</span>
+              </a>
+              <a class="btn btn-outline-secondary btn-lg" href="https://paintbypixels.app/" target="_blank" rel="noreferrer">
+                <i class="bi bi-box-arrow-up-right me-2"></i><span data-i18n="hero.ctaFeatured">Featured: Paint By Pixels</span>
+              </a>
+                <a class="btn btn-outline-secondary btn-lg" href="https://map.ukrainealarm.com/" target="_blank" rel="noreferrer">
+                    <i class="bi bi-box-arrow-up-right me-2"></i><span data-i18n="hero.ctaFeatured_map">Featured: Air-Raid Alerts Map</span>
+                </a>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="small-links d-flex flex-wrap gap-3 small">
+              <span class="muted"><i class="bi bi-geo-alt me-1"></i><span data-i18n="hero.location">Ukraine / Remote</span></span>
+              <a href="mailto:povstalez@gmail.com"><i class="bi bi-envelope me-1"></i>povstalez@gmail.com</a>
+              <a href="https://t.me/artem_lemeshev" target="_blank" rel="noreferrer"><i class="bi bi-telegram me-1"></i>@artem_lemeshev</a>
+              <span class="muted"><i class="bi bi-phone me-1"></i>+380961997704</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="glass p-4 p-md-5 h-100">
+            <h2 class="h5 fw-bold mb-2" data-i18n="hero.sideTitle">Коротко</h2>
+            <p class="muted mb-4" data-i18n="hero.sideText">
+              Основний фокус — Unity: архітектура клієнта, геймплейні системи, оптимізація.
+              Backend на ASP.NET Core використовую як інженерний плюс для end-to-end доставки продукту.
+            </p>
+
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="p-3 bg-white border rounded-4">
+                  <div class="fw-semibold"><i class="bi bi-stars me-2 text-primary"></i><span data-i18n="hero.sideItem1Title">Ролі</span></div>
+                  <div class="muted" data-i18n="hero.sideItem1Text">Unity Developer • Tech Lead • Client-Side Team Lead</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="p-3 bg-white border rounded-4">
+                  <div class="fw-semibold"><i class="bi bi-stack me-2 text-success"></i><span data-i18n="hero.sideItem2Title">Стек</span></div>
+                  <div class="muted" data-i18n="hero.sideItem2Text">Unity, C#, WebGL, REST, ASP.NET Core, PostgreSQL, Redis, Docker</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="p-3 bg-white border rounded-4">
+                  <div class="fw-semibold"><i class="bi bi-check2-circle me-2 text-dark"></i><span data-i18n="hero.sideItem3Title">Сильні сторони</span></div>
+                  <div class="muted" data-i18n="hero.sideItem3Text">Maintainability • Performance • Delivery • Team leadership</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Skills -->
+  <section id="skills" class="section anchor-offset">
+    <div class="container">
+      <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-4">
+        <div>
+          <h2 class="fw-bold mb-1" data-i18n="skills.title">Навички</h2>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <div class="glass p-4 h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-controller fs-4 text-primary"></i>
+              <h3 class="h5 fw-bold mb-0" data-i18n="skills.unityTitle">Unity / Client</h3>
+            </div>
+            <div>
+              <span class="chip tag-unity">Unity</span>
+              <span class="chip tag-unity">C#</span>
+              <span class="chip tag-unity">Unity UI</span>
+              <span class="chip tag-unity">UGUI</span>
+              <span class="chip tag-unity">TextMeshPro</span>
+              <span class="chip tag-unity">Addressables</span>
+              <span class="chip tag-unity">ScriptableObjects</span>
+              <span class="chip tag-unity">DOTween</span>
+              <span class="chip tag-unity">UniTask</span>
+              <span class="chip tag-unity">Async / Await</span>
+              <span class="chip tag-unity">MVC / MVVM patterns</span>
+              <span class="chip tag-unity">Client architecture</span>
+              <span class="chip tag-unity">Gameplay systems</span>
+              <span class="chip tag-unity">State machines</span>
+              <span class="chip tag-unity">Input System</span>
+              <span class="chip tag-unity">Mobile optimization</span>
+              <span class="chip tag-unity">Memory & GC optimization</span>
+              <span class="chip tag-unity">WebGL optimization</span>
+              <span class="chip tag-unity">Live ops</span>
+              <span class="chip tag-unity">Analytics & events</span>
+              <span class="chip tag-unity">IAP & monetization</span>
+              <span class="chip tag-unity">Release pipelines</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="glass p-4 h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-server fs-4 text-success"></i>
+              <h3 class="h5 fw-bold mb-0" data-i18n="skills.backendTitle">Backend (Bonus)</h3>
+            </div>
+            <div>
+              <span class="chip tag-backend">ASP.NET Core</span>
+              <span class="chip tag-backend">C#</span>
+              <span class="chip tag-backend">REST APIs</span>
+              <span class="chip tag-backend">Minimal APIs</span>
+              <span class="chip tag-backend">ASP.NET Identity</span>
+              <span class="chip tag-backend">JWT / API Keys</span>
+              <span class="chip tag-backend">Entity Framework Core</span>
+              <span class="chip tag-backend">Npgsql</span>
+              <span class="chip tag-backend">PostgreSQL</span>
+              <span class="chip tag-backend">Redis</span>
+              <span class="chip tag-backend">Distributed cache</span>
+              <span class="chip tag-backend">Rate limiting</span>
+              <span class="chip tag-backend">BackgroundServices</span>
+              <span class="chip tag-backend">Queues / Messaging</span>
+              <span class="chip tag-backend">Swagger / OpenAPI</span>
+              <span class="chip tag-backend">API versioning</span>
+              <span class="chip tag-backend">Docker</span>
+              <span class="chip tag-backend">Kubernetes basics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="glass p-4 h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-people fs-4 text-dark"></i>
+              <h3 class="h5 fw-bold mb-0" data-i18n="skills.leadTitle">Leadership</h3>
+            </div>
+            <ul class="mb-0">
+              <li data-i18n="skills.lead1">Tech lead / mentoring</li>
+              <li data-i18n="skills.lead2">Code quality & standards</li>
+              <li data-i18n="skills.lead3">Cross-team collaboration</li>
+              <li data-i18n="skills.lead4">Maintainable architecture</li>
+              <li data-i18n="skills.lead5">Technical decision-making</li>
+              <li data-i18n="skills.lead6">Architecture reviews</li>
+              <li data-i18n="skills.lead7">Task decomposition & estimation</li>
+              <li data-i18n="skills.lead8">Ownership & delivery mindset</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section bg-white border-top border-bottom anchor-offset">
+    <div class="container">
+      <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-4">
+        <div>
+          <h2 class="fw-bold mb-1" data-i18n="projects.title">Проєкти</h2>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- 1 Paint By Pixels -->
+        <div class="col-lg-6">
+          <div class="card project-card shadow-sm h-100 border-0">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-start gap-3">
+                <div>
+                  <h3 class="h5 fw-bold mb-1">Paint By Pixels</h3>
+                  <div class="project-meta muted mb-2" data-i18n="p1.meta">Own project • Oct 2025 — Present • Mobile</div>
+                </div>
+                <span class="badge rounded-pill text-bg-primary" data-i18n="projects.badge.game">Game</span>
+              </div>
+
+              <p class="mb-3" data-i18n="p1.desc">
+                Indie mobile game focused on relaxation and mindfulness through pixel art coloring.
+              </p>
+
+              <div class="glass p-3">
+                <div class="fw-semibold mb-2" data-i18n="projects.whatIDid">What I did</div>
+                <ul class="mb-0">
+                  <li data-i18n="p1.b1">Solo developer (Unity, C#)</li>
+                  <li data-i18n="p1.b2">Designed core gameplay mechanics</li>
+                  <li data-i18n="p1.b3">Built backend services and integrations</li>
+                  <li data-i18n="p1.b4">Implemented analytics, monetization, and live ops</li>
+                  <li data-i18n="p1.b5">Managed App Store & Google Play publishing</li>
+                  <li data-i18n="p1.b6">Created marketing assets and localization</li>
+                </ul>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <a class="btn btn-sm btn-outline-dark" href="https://paintbypixels.app/" target="_blank" rel="noreferrer">
+                  <i class="bi bi-box-arrow-up-right me-1"></i><span data-i18n="projects.open">Open</span>
+                </a>
+                <span class="chip tag-unity">Unity</span>
+                <span class="chip tag-backend">ASP.NET Core</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 Dino -->
+        <div class="col-lg-6">
+          <div class="card project-card shadow-sm h-100 border-0">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-start gap-3">
+                <div>
+                  <h3 class="h5 fw-bold mb-1">Dino: Self-Care Buddy</h3>
+                  <div class="project-meta muted mb-2" data-i18n="p2.meta">Sleepagotchi • Jan 2025 — Present • Mobile</div>
+                </div>
+                <span class="badge rounded-pill text-bg-primary" data-i18n="projects.badge.game">Game</span>
+              </div>
+
+              <p class="mb-3" data-i18n="p2.desc">
+                Self-care mobile application focused on emotional well-being and daily routines.
+              </p>
+
+              <div class="glass p-3">
+                <div class="fw-semibold mb-2" data-i18n="p2.role">Role: Client-Side Team Lead</div>
+                <ul class="mb-0">
+                  <li data-i18n="p2.b1">Managed and mentored the client-side development team</li>
+                  <li data-i18n="p2.b2">Designed and owned a scalable, extensible architecture focused on long-term maintainability</li>
+                  <li data-i18n="p2.b3">Designed and implemented a shared business-logic library reused across client and backend</li>
+                  <li data-i18n="p2.b4">Integrated AI-powered services into the client application</li>
+                  <li data-i18n="p2.b5">Ensured consistency, performance, and code quality across the project</li>
+                  <li data-i18n="p2.b6">Collaborated closely with backend, product, and design teams</li>
+                </ul>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <a class="btn btn-sm btn-outline-dark" href="https://apps.apple.com/us/app/dino-self-care-buddy/id6754885555" target="_blank" rel="noreferrer">
+                  <i class="bi bi-apple me-1"></i><span data-i18n="projects.appStore">App Store</span>
+                </a>
+                <span class="chip tag-unity">Unity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 API UkraineAlarm -->
+        <div class="col-lg-6">
+          <div class="card project-card shadow-sm h-100 border-0">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-start gap-3">
+                <div>
+                  <h3 class="h5 fw-bold mb-1" data-i18n="p3.title">Air-Raid Alerts API</h3>
+                  <div class="project-meta muted mb-2" data-i18n="p3.meta">Volunteering • Mar 2022 — Present • Backend</div>
+                </div>
+                <span class="badge rounded-pill text-bg-dark" data-i18n="projects.badge.fullstack">Full-stack</span>
+              </div>
+
+              <p class="mb-3" data-i18n="p3.desc">
+                Resilient, scalable ASP.NET Core API serving air-raid alerts and geodata (GeoJSON) with auth, queues, caching, and Docker/K8s readiness.
+              </p>
+
+              <div class="glass p-3">
+                <div class="fw-semibold mb-2" data-i18n="projects.whatIDid">What I did</div>
+                <ul class="mb-0">
+                  <li data-i18n="p3.b1">Designed and implemented REST endpoints (alerts, regions, geodata, webhooks)</li>
+                  <li data-i18n="p3.b2">Background workers + AWS SQS/SNS consumers for reliable async processing</li>
+                  <li data-i18n="p3.b3">Redis caching and rate limiting</li>
+                  <li data-i18n="p3.b4">EF Core + PostgreSQL persistence, resilient retries, DbContextFactory</li>
+                  <li data-i18n="p3.b5">Auth: ASP.NET Identity + custom API key handler</li>
+                  <li data-i18n="p3.b6">Swagger/OpenAPI + API versioning + Docker + Helm readiness</li>
+                </ul>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <a class="btn btn-sm btn-outline-dark" href="https://api.ukrainealarm.com/" target="_blank" rel="noreferrer">
+                  <i class="bi bi-box-arrow-up-right me-1"></i><span data-i18n="projects.open">Open</span>
+                </a>
+                <span class="chip tag-backend">ASP.NET Core</span>
+                <span class="chip tag-backend">PostgreSQL</span>
+                <span class="chip tag-backend">Redis</span>
+                <span class="chip tag-backend">AWS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Map UkraineAlarm -->
+        <div class="col-lg-6">
+          <div class="card project-card shadow-sm h-100 border-0">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-start gap-3">
+                <div>
+                  <h3 class="h5 fw-bold mb-1" data-i18n="p4.title">Air-Raid Alerts Map</h3>
+                  <div class="project-meta muted mb-2" data-i18n="p4.meta">Volunteering • Mar 2022 — Present • Full-stack</div>
+                </div>
+                <span class="badge rounded-pill text-bg-dark" data-i18n="projects.badge.fullstack">Full-stack</span>
+              </div>
+
+              <p class="mb-3" data-i18n="p4.desc">
+                Real-time air-raid alert map for Ukraine: versioned API, background ingestion, realtime delivery, interactive web UI and map logic.
+              </p>
+
+              <div class="glass p-3">
+                <div class="fw-semibold mb-2" data-i18n="projects.whatIDid">What I did</div>
+                <ul class="mb-0">
+                  <li data-i18n="p4.b1">Versioned REST API (ASP.NET Core) for mobile + web</li>
+                  <li data-i18n="p4.b2">Realtime notifications via Centrifugo</li>
+                  <li data-i18n="p4.b3">Push: FCM (Android) + dotAPNS (iOS)</li>
+                  <li data-i18n="p4.b4">HostedServices for polling/aggregation + dispatch</li>
+                  <li data-i18n="p4.b5">Server-side map rendering with SkiaSharp + Svg.Skia</li>
+                  <li data-i18n="p4.b6">Redis caching + JWT auth + Docker/K8s artifacts (Helm)</li>
+                </ul>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <a class="btn btn-sm btn-outline-dark" href="https://map.ukrainealarm.com/" target="_blank" rel="noreferrer">
+                  <i class="bi bi-box-arrow-up-right me-1"></i><span data-i18n="projects.open">Open</span>
+                </a>
+                <span class="chip tag-backend">ASP.NET Core</span>
+                <span class="chip tag-backend">Centrifugo</span>
+                <span class="chip tag-backend">AWS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Ukrenergo -->
+        <div class="col-lg-6">
+          <div class="card project-card shadow-sm h-100 border-0">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-start gap-3">
+                <div>
+                  <h3 class="h5 fw-bold mb-1">Ukrenergo</h3>
+                  <div class="project-meta muted mb-2" data-i18n="p5.meta">Sep 2024 — Feb 2025 • Backend + Admin</div>
+                </div>
+                <span class="badge rounded-pill text-bg-success" data-i18n="projects.badge.backend">Backend</span>
+              </div>
+
+              <p class="mb-3" data-i18n="p5.desc">
+                Backend platform and administrative system for dispatchers and operational staff.
+              </p>
+
+              <div class="glass p-3">
+                <div class="fw-semibold mb-2" data-i18n="projects.whatIDid">What I did</div>
+                <ul class="mb-0">
+                  <li data-i18n="p5.b1">Designed and implemented backend services for mobile applications</li>
+                  <li data-i18n="p5.b2">Built and maintained REST APIs using ASP.NET Core</li>
+                  <li data-i18n="p5.b3">Developed a full-featured admin panel for dispatchers and administrators</li>
+                  <li data-i18n="p5.b4">Implemented business logic and operational workflows</li>
+                  <li data-i18n="p5.b5">Designed role-based access control and permissions</li>
+                  <li data-i18n="p5.b6">Ensured reliability, security, and maintainability</li>
+                </ul>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <a class="btn btn-sm btn-outline-dark" href="https://apps.apple.com/ua/app/%D1%83%D0%BA%D1%80%D0%B5%D0%BD%D0%B5%D1%80%D0%B3%D0%BE/id6695740675" target="_blank" rel="noreferrer">
+                  <i class="bi bi-apple me-1"></i><span data-i18n="projects.appStore">App Store</span>
+                </a>
+                <span class="chip tag-backend">ASP.NET Core</span>
+                <span class="chip tag-backend">PostgreSQL</span>
+                <span class="chip tag-backend">Redis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 Sleepagotchi -->
+        <div class="col-lg-6">
+          <div class="card project-card shadow-sm h-100 border-0">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-start gap-3">
+                <div>
+                  <h3 class="h5 fw-bold mb-1">Sleepagotchi</h3>
+                  <div class="project-meta muted mb-2" data-i18n="p6.meta">Dec 2024 — Jan 2025 • Mobile</div>
+                </div>
+                <span class="badge rounded-pill text-bg-primary" data-i18n="projects.badge.game">Game</span>
+              </div>
+
+              <p class="mb-3" data-i18n="p6.desc">
+                Sleep tracking app combining health data with game mechanics to motivate better sleep habits.
+              </p>
+
+              <div class="glass p-3">
+                <div class="fw-semibold mb-2" data-i18n="p6.role">Role: Client-Side Team Lead</div>
+                <ul class="mb-0">
+                  <li data-i18n="p6.b1">Managed and mentored the client-side development team</li>
+                  <li data-i18n="p6.b2">Designed and owned a scalable, extensible client architecture</li>
+                  <li data-i18n="p6.b3">Integrated Apple Health and Google Health services for sleep data</li>
+                  <li data-i18n="p6.b4">Implemented gamification systems driven by real sleep metrics</li>
+                  <li data-i18n="p6.b5">Ensured performance, reliability, and data consistency</li>
+                  <li data-i18n="p6.b6">Collaborated with backend, product, and design teams</li>
+                </ul>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <a class="btn btn-sm btn-outline-dark" href="https://apps.apple.com/ua/app/sleepagotchi/id6743857605" target="_blank" rel="noreferrer">
+                  <i class="bi bi-apple me-1"></i><span data-i18n="projects.appStore">App Store</span>
+                </a>
+                <span class="chip tag-unity">Unity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 Sleepagotchi LITE -->
+        <div class="col-lg-6">
+          <div class="card project-card shadow-sm h-100 border-0">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-start gap-3">
+                <div>
+                  <h3 class="h5 fw-bold mb-1">Sleepagotchi LITE</h3>
+                  <div class="project-meta muted mb-2" data-i18n="p7.meta">Sleepagotchi • Nov 2023 — Dec 2023 • Telegram Mini App (WebGL)</div>
+                </div>
+                <span class="badge rounded-pill text-bg-primary" data-i18n="projects.badge.webgl">WebGL</span>
+              </div>
+
+              <p class="mb-3" data-i18n="p7.desc">
+                Idle card game in the Sleepagotchi universe, built as a Telegram Mini App to reach users inside Telegram.
+              </p>
+
+              <div class="glass p-3">
+                <div class="fw-semibold mb-2" data-i18n="projects.whatIDid">What I did</div>
+                <ul class="mb-0">
+                  <li data-i18n="p7.b1">Led development of the Unity WebGL client for Telegram Mini Apps</li>
+                  <li data-i18n="p7.b2">Designed and owned a scalable, extensible client architecture</li>
+                  <li data-i18n="p7.b3">Implemented core gameplay and idle card mechanics</li>
+                  <li data-i18n="p7.b4">Adapted gameplay systems and UI for WebGL & in-chat constraints</li>
+                  <li data-i18n="p7.b5">Integrated Telegram Mini App APIs and platform-specific flows</li>
+                  <li data-i18n="p7.b6">Integrated third-party payment services within Telegram ecosystem</li>
+                </ul>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <a class="btn btn-sm btn-outline-dark" href="https://t.me/sleepagotchiLITE_bot" target="_blank" rel="noreferrer">
+                  <i class="bi bi-telegram me-1"></i><span data-i18n="projects.openBot">Open bot</span>
+                </a>
+                <span class="chip tag-unity">Unity</span>
+                <span class="chip tag-unity">WebGL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section anchor-offset">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-12">
+          <div class="glass p-4 p-md-5 h-100">
+            <h2 class="fw-bold mb-2" data-i18n="contact.title">Контакти</h2>
+              <br>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="p-3 bg-white border rounded-4 h-100">
+                  <div class="fw-semibold mb-1"><i class="bi bi-envelope me-2"></i><span data-i18n="contact.email">Email</span></div>
+                  <a href="mailto:povstalez@gmail.com">povstalez@gmail.com</a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 bg-white border rounded-4 h-100">
+                  <div class="fw-semibold mb-1"><i class="bi bi-telegram me-2"></i>Telegram</div>
+                  <a href="https://t.me/artem_lemeshev" target="_blank" rel="noreferrer">@artem_lemeshev</a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 bg-white border rounded-4 h-100">
+                  <div class="fw-semibold mb-1"><i class="bi bi-phone me-2"></i><span data-i18n="contact.phone">Phone</span></div>
+                  <span>+380961997704</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 bg-white border rounded-4 h-100">
+                  <div class="fw-semibold mb-1"><i class="bi bi-link-45deg me-2"></i><span data-i18n="contact.links">Links</span></div>
+                  <div class="small-links">
+                    <a href="https://paintbypixels.app/" target="_blank" rel="noreferrer">paintbypixels.app</a><br/>
+                    <a href="https://map.ukrainealarm.com/" target="_blank" rel="noreferrer">map.ukrainealarm.com</a><br/>
+                    <a href="https://api.ukrainealarm.com/" target="_blank" rel="noreferrer">api.ukrainealarm.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 border-top bg-white">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <div class="muted small">© <span id="year"></span> Artem Lemeshev</div>
+      <a class="small text-decoration-none" href="#top">↑ <span data-i18n="footer.up">Up</span></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // --- i18n dictionary ---
+    const I18N = {
+      uk: {
+        "hero.expBadge": "12+ років комерційного досвіду з Unity",
+        "nav.skills": "Навички",
+        "nav.projects": "Проєкти",
+        "nav.contacts": "Контакти",
+
+        "hero.kicker": "Unity • Mobile • WebGL • Tech Lead",
+        "hero.title": "Unity Developer & Tech Lead",
+        "hero.subtitle": "Unity Developer / Tech Lead",
+        "hero.about":
+          "Unity розробник і Tech Lead з практичним досвідом повного циклу розробки mobile та WebGL ігор. " +
+          "Спеціалізуюсь на клієнтській архітектурі, геймплейних системах та оптимізації продуктивності в Unity, " +
+          "а також за потреби роблю бекенд-сервіси на ASP.NET Core. Є досвід лідерства команд і доставки масштабованих, підтримуваних продуктів.",
+        "hero.focus1": "Клієнтська архітектура",
+        "hero.focus2": "Геймплей та перфоманс",
+        "hero.focus3": "ASP.NET Core як плюс",
+        "hero.ctaProjects": "Проєкти",
+        "hero.ctaContact": "Звʼязатись",
+        "hero.ctaCV": "Завантажити CV",
+        "hero.ctaFeatured": "Featured: Paint By Pixels",
+        "hero.ctaFeatured_map": "Featured: Air-Raid Alerts Map",
+        "hero.location": "Україна / Remote",
+
+        "hero.sideTitle": "Коротко",
+        "hero.sideText": "Unity-розробник з великим практичним досвідом у створенні mobile та WebGL продуктів. Працюю з клієнтською архітектурою, геймплейними системами та стабільністю продакшн-рішень, а також можу закривати повний цикл розробки за рахунок бекенд-досвіду.",
+        "hero.sideItem1Title": "Ролі",
+        "hero.sideItem1Text": "Unity Developer • Tech Lead • Client-Side Team Lead",
+        "hero.sideItem2Title": "Стек",
+        "hero.sideItem2Text": "Unity, C#, WebGL, REST, ASP.NET Core, PostgreSQL, Redis, Docker",
+        "hero.sideItem3Title": "Сильні сторони",
+        "hero.sideItem3Text": "Maintainability • Performance • Delivery • Team leadership",
+        "hero.sideItem4Title": "Експертиза",
+        "hero.sideItem4Text": "Клієнтська архітектура • Геймплейні системи • Оптимізація продуктивності • WebGL та mobile обмеження",
+        "hero.tip": "Порада: 1 сторінка + чіткі булети по внеску працюють краще за “полотна” тексту.",
+
+        "skills.title": "Навички",
+        "skills.subtitle": "Unity — основне. Backend — як додаткова сила для end-to-end",
+        "skills.unityTitle": "Unity / Client",
+        "skills.unity1": "Клієнтська архітектура",
+        "skills.unity2": "Геймплейні системи",
+        "skills.unity3": "Оптимізація продуктивності",
+        "skills.unity4": "Live ops",
+        "skills.unity5": "Монетизація та аналітика",
+        "skills.backendTitle": "Backend",
+        "skills.backend1": "Auth / JWT",
+        "skills.backend2": "Фонові воркери",
+        "skills.backend3": "Кеш і rate limiting",
+        "skills.leadTitle": "Лідерство",
+        "skills.lead1": "Tech lead / менторинг",
+        "skills.lead2": "Якість коду та стандарти",
+        "skills.lead3": "Співпраця між командами",
+        "skills.lead4": "Підтримувана архітектура",
+        "skills.lead5": "Прийняття технічних рішень",
+        "skills.lead6": "Архітектурні ревʼю",
+        "skills.lead7": "Декомпозиція задач та оцінка",
+        "skills.lead8": "Ownership та delivery mindset",
+
+        "projects.title": "Проєкти",
+        "projects.subtitle": "Фокус на внесок у Unity: архітектура, геймплей, перфоманс",
+        "projects.whatIDid": "Що я робив",
+        "projects.open": "Відкрити",
+        "projects.appStore": "App Store",
+        "projects.openBot": "Відкрити бота",
+        "projects.tip": "Якщо хочеш — додам блок “Highlights” (цифри, досягнення, метрики), але тільки якщо є дані які можна публікувати.",
+        "projects.badge.game": "Гра",
+        "projects.badge.app": "Додаток",
+        "projects.badge.backend": "Backend",
+        "projects.badge.fullstack": "Full-stack",
+        "projects.badge.webgl": "WebGL",
+
+        "p1.meta": "Власний проєкт • Жов 2025 — дотепер • Mobile",
+        "p1.desc": "Indie mobile game focused on relaxation and mindfulness through pixel art coloring.",
+        "p1.b1": "Solo developer (Unity, C#)",
+        "p1.b2": "Спроєктував core gameplay механіки",
+        "p1.b3": "Зробив backend сервіси та інтеграції",
+        "p1.b4": "Імплементував аналітику, монетизацію та live ops",
+        "p1.b5": "Паблішинг App Store & Google Play",
+        "p1.b6": "Маркетингові матеріали та локалізація",
+
+        "p2.meta": "Sleepagotchi • Січ 2025 — дотепер • Mobile",
+        "p2.desc": "Self-care mobile application focused on emotional well-being and daily routines.",
+        "p2.role": "Роль: Client-Side Team Lead",
+        "p2.b1": "Керував і менторив клієнтську команду",
+        "p2.b2": "Спроєктував і володів масштабованою архітектурою з фокусом на підтримуваність",
+        "p2.b3": "Зробив shared business-logic library для повторного використання в client+backend",
+        "p2.b4": "Інтеграція AI-powered сервісів у клієнт",
+        "p2.b5": "Контроль консистентності, перфомансу та якості коду",
+        "p2.b6": "Тісна співпраця з backend/product/design командами",
+
+        "p3.title": "API Повітряна тривога",
+        "p3.meta": "Волонтерство • Бер 2022 — дотепер • Backend",
+        "p3.desc": "Надійний та масштабований ASP.NET Core API для тривог і геоданих (GeoJSON) з авторизацією, чергами, кешем та готовністю до Docker/K8s.",
+        "p3.b1": "REST endpoints (alerts, regions, geodata, webhooks)",
+        "p3.b2": "Фонові воркери + AWS SQS/SNS consumers для асинхронної обробки",
+        "p3.b3": "Redis cache + rate limiting",
+        "p3.b4": "EF Core + PostgreSQL, retries, DbContextFactory",
+        "p3.b5": "Auth: ASP.NET Identity + custom API key handler",
+        "p3.b6": "Swagger/OpenAPI + versioning + Docker + Helm",
+
+        "p4.title": "Мапа повітряних тривог",
+        "p4.meta": "Волонтерство • Бер 2022 — дотепер • Full-stack",
+        "p4.desc": "Real-time мапа тривог: versioned API, ingestion, realtime доставка, web UI та логіка мапи.",
+        "p4.b1": "Versioned REST API (ASP.NET Core) для mobile + web",
+        "p4.b2": "Realtime через Centrifugo",
+        "p4.b3": "Push: FCM (Android) + dotAPNS (iOS)",
+        "p4.b4": "HostedServices для polling/aggregation + dispatch",
+        "p4.b5": "Server-side рендер мапи (SkiaSharp + Svg.Skia)",
+        "p4.b6": "Redis + JWT + Docker/K8s artifacts (Helm)",
+
+        "p5.meta": "Вер 2024 — Лют 2025 • Backend + Admin",
+        "p5.desc": "Backend платформа та адмін-система для диспетчерів і операційного персоналу.",
+        "p5.b1": "Backend сервіси для мобільних застосунків",
+        "p5.b2": "REST APIs на ASP.NET Core",
+        "p5.b3": "Адмін-панель для диспетчерів/адмінів",
+        "p5.b4": "Бізнес-логіка та операційні флоу",
+        "p5.b5": "RBAC: ролі, права, доступи",
+        "p5.b6": "Надійність, безпека, підтримуваність",
+
+        "p6.meta": "Гру 2024 — Січ 2025 • Mobile",
+        "p6.desc": "Sleep tracking застосунок з гейміфікацією на основі health data.",
+        "p6.role": "Роль: Client-Side Team Lead",
+        "p6.b1": "Керував і менторив клієнтську команду",
+        "p6.b2": "Архітектура клієнта (масштабована, підтримувана)",
+        "p6.b3": "Інтеграція Apple Health та Google Health",
+        "p6.b4": "Гейміфікація на реальних метриках сну",
+        "p6.b5": "Перфоманс, стабільність, консистентність даних",
+        "p6.b6": "Співпраця з backend/product/design",
+
+        "p7.meta": "Sleepagotchi • Лис 2023 — Гру 2023 • Telegram Mini App (WebGL)",
+        "p7.desc": "Idle card game у всесвіті Sleepagotchi, зроблена як Telegram Mini App.",
+        "p7.b1": "Лідив розробку Unity WebGL клієнта для Telegram Mini Apps",
+        "p7.b2": "Архітектура клієнта (масштабована та розширювана)",
+        "p7.b3": "Core gameplay та idle card механіки",
+        "p7.b4": "Адаптація UI/UX під WebGL та in-chat обмеження",
+        "p7.b5": "Інтеграція Telegram Mini App APIs",
+        "p7.b6": "Інтеграція сторонніх платежів у Telegram",
+
+        "contact.title": "Контакти",
+        "contact.subtitle": "Напиши мені — і я відповім з деталями по проєктах або доступними демо/кейсам.",
+        "contact.email": "Email",
+        "contact.phone": "Телефон",
+        "contact.links": "Посилання",
+        "contact.note": "Можу додати кнопку “Download CV (PDF)” або секцію “Experience”, якщо скажеш формат.",
+        "contact.quickTitle": "Короткий pitch",
+        "contact.quickText": "Unity розробник, який може вести клієнт end-to-end (архітектура → геймплей → перфоманс → реліз) і при потребі підключати бекенд.",
+        "contact.extraTitle": "Опціональні апгрейди",
+        "contact.extra1": "Перемикач темної теми",
+        "contact.extra2": "OpenGraph картинка для красивого превʼю",
+        "contact.extra3": "Кнопка на PDF CV",
+        "contact.extra4": "“Highlights” з цифрами (якщо можна показувати)",
+
+        "footer.up": "Вгору"
+      },
+
+      en: {
+        "nav.skills": "Skills",
+        "nav.projects": "Projects",
+        "nav.contacts": "Contacts",
+
+        "hero.kicker": "Unity • Mobile • WebGL • Tech Lead",
+        "hero.title": "Unity Developer & Tech Lead",
+        "hero.subtitle": "Unity Developer / Tech Lead",
+        "hero.about":
+          "Unity developer and Tech Lead with hands-on experience in building mobile and WebGL games end-to-end. " +
+          "I specialize in client-side architecture, gameplay systems, and performance optimization in Unity, " +
+          "while also working on backend services using ASP.NET Core. Experienced in leading development teams and delivering scalable, maintainable products.",
+        "hero.focus1": "Client architecture",
+        "hero.focus2": "Gameplay & performance",
+        "hero.focus3": "ASP.NET Core as a plus",
+        "hero.ctaProjects": "Projects",
+        "hero.ctaContact": "Contact",
+        "hero.ctaCV": "Download CV",
+        "hero.ctaFeatured": "Featured: Paint By Pixels", 
+        "hero.ctaFeatured_map": "Featured: Air-Raid Alerts Map",
+        "hero.location": "Ukraine / Remote",
+
+        "hero.sideTitle": "In short",
+        "hero.sideText": "Experienced Unity developer with a strong track record of building mobile and WebGL products. I work extensively with client-side architecture, gameplay systems, and production stability, and can support full end-to-end delivery thanks to backend experience.",
+        "hero.sideItem1Title": "Roles",
+        "hero.sideItem1Text": "Unity Developer • Tech Lead • Client-Side Team Lead",
+        "hero.sideItem2Title": "Stack",
+        "hero.sideItem2Text": "Unity, C#, WebGL, REST, ASP.NET Core, PostgreSQL, Redis, Docker",
+        "hero.sideItem3Title": "Strengths",
+        "hero.sideItem3Text": "Maintainability • Performance • Delivery • Team leadership",
+        "hero.sideItem4Title": "Expertise",
+        "hero.sideItem4Text": "Client architecture • Gameplay systems • Performance optimization • WebGL & mobile constraints",
+        "hero.tip": "Tip: a clean one-pager + strong contribution bullets beats long walls of text.",
+
+        "skills.title": "Skills",
+        "skills.subtitle": "Unity is primary. Backend is a strong bonus for end-to-end delivery.",
+        "skills.unityTitle": "Unity / Client",
+        "skills.unity1": "Client architecture",
+        "skills.unity2": "Gameplay systems",
+        "skills.unity3": "Performance optimization",
+        "skills.unity4": "Live ops",
+        "skills.unity5": "Monetization & analytics",
+        "skills.backendTitle": "Backend",
+        "skills.backend1": "Auth / JWT",
+        "skills.backend2": "Background workers",
+        "skills.backend3": "Caching & rate limiting",
+        "skills.leadTitle": "Leadership",
+        "skills.lead1": "Tech lead / mentoring",
+        "skills.lead2": "Code quality & standards",
+        "skills.lead3": "Cross-team collaboration",
+        "skills.lead4": "Maintainable architecture",
+        "skills.lead5": "Technical decision-making",
+        "skills.lead6": "Architecture reviews",
+        "skills.lead7": "Task decomposition & estimation",
+        "skills.lead8": "Ownership & delivery mindset",
+
+        "projects.title": "Projects",
+        "projects.subtitle": "Unity-focused contributions: architecture, gameplay, performance",
+        "projects.whatIDid": "What I did",
+        "projects.open": "Open",
+        "projects.appStore": "App Store",
+        "projects.openBot": "Open bot",
+        "projects.tip": "If you want, I can add a “Highlights” block (numbers/impact/metrics) — only with shareable data.",
+        "projects.badge.game": "Game",
+        "projects.badge.app": "App",
+        "projects.badge.backend": "Backend",
+        "projects.badge.fullstack": "Full-stack",
+        "projects.badge.webgl": "WebGL",
+
+        "p1.meta": "Own project • Oct 2025 — Present • Mobile",
+        "p1.desc": "Indie mobile game focused on relaxation and mindfulness through pixel art coloring.",
+        "p1.b1": "Solo developer (Unity, C#)",
+        "p1.b2": "Designed core gameplay mechanics",
+        "p1.b3": "Built backend services and integrations",
+        "p1.b4": "Implemented analytics, monetization, and live ops",
+        "p1.b5": "Managed App Store & Google Play publishing",
+        "p1.b6": "Created marketing assets and localization",
+
+        "p2.meta": "Sleepagotchi • Jan 2025 — Present • Mobile",
+        "p2.desc": "Self-care mobile application focused on emotional well-being and daily routines.",
+        "p2.role": "Role: Client-Side Team Lead",
+        "p2.b1": "Managed and mentored the client-side development team",
+        "p2.b2": "Designed and owned a scalable, extensible architecture focused on long-term maintainability",
+        "p2.b3": "Designed and implemented a shared business-logic library reused across client and backend",
+        "p2.b4": "Integrated AI-powered services into the client application",
+        "p2.b5": "Ensured consistency, performance, and code quality across the project",
+        "p2.b6": "Collaborated closely with backend, product, and design teams",
+
+        "p3.title": "Air-Raid Alerts API",
+        "p3.meta": "Volunteering • Mar 2022 — Present • Backend",
+        "p3.desc": "Resilient, scalable ASP.NET Core API serving air-raid alerts and geodata (GeoJSON) with auth, queues, caching, and Docker/K8s readiness.",
+        "p3.b1": "Designed and implemented REST endpoints (alerts, regions, geodata, webhooks)",
+        "p3.b2": "Background workers + AWS SQS/SNS consumers for reliable async processing",
+        "p3.b3": "Redis caching and rate limiting",
+        "p3.b4": "EF Core + PostgreSQL persistence, retries, DbContextFactory",
+        "p3.b5": "Auth: ASP.NET Identity + custom API key handler",
+        "p3.b6": "Swagger/OpenAPI + API versioning + Docker + Helm readiness",
+
+        "p4.title": "Air-Raid Alerts Map",
+        "p4.meta": "Volunteering • Mar 2022 — Present • Full-stack",
+        "p4.desc": "Real-time air-raid alert map for Ukraine: versioned API, background ingestion, realtime delivery, interactive web UI and map logic.",
+        "p4.b1": "Versioned REST API (ASP.NET Core) for mobile + web",
+        "p4.b2": "Real-time notifications via Centrifugo",
+        "p4.b3": "Push: FCM (Android) + dotAPNS (iOS)",
+        "p4.b4": "HostedServices for polling/aggregation + dispatch",
+        "p4.b5": "Server-side map rendering with SkiaSharp + Svg.Skia",
+        "p4.b6": "Redis caching + JWT auth + Docker/K8s artifacts (Helm)",
+
+        "p5.meta": "Sep 2024 — Feb 2025 • Backend + Admin",
+        "p5.desc": "Backend platform and administrative system built for Ukrenergo dispatchers and operational staff.",
+        "p5.b1": "Designed and implemented backend services for mobile applications",
+        "p5.b2": "Built and maintained REST APIs using ASP.NET Core",
+        "p5.b3": "Developed a full-featured admin panel for dispatchers and administrators",
+        "p5.b4": "Implemented backend business logic and operational workflows",
+        "p5.b5": "Designed role-based access control and permissions",
+        "p5.b6": "Ensured reliability, security, and maintainability",
+
+        "p6.meta": "Dec 2024 — Jan 2025 • Mobile",
+        "p6.desc": "Sleep tracking app combining health data with game mechanics to motivate better sleep habits.",
+        "p6.role": "Role: Client-Side Team Lead",
+        "p6.b1": "Managed and mentored the client-side development team",
+        "p6.b2": "Designed and owned a scalable, extensible client architecture",
+        "p6.b3": "Integrated Apple Health and Google Health services for sleep data",
+        "p6.b4": "Implemented gamification systems driven by real sleep metrics",
+        "p6.b5": "Ensured performance, reliability, and data consistency",
+        "p6.b6": "Collaborated closely with backend, product, and design teams",
+
+        "p7.meta": "Sleepagotchi • Nov 2023 — Dec 2023 • Telegram Mini App (WebGL)",
+        "p7.desc": "Idle card game set in the Sleepagotchi universe, built as a Telegram Mini App.",
+        "p7.b1": "Led development of the Unity WebGL client for Telegram Mini Apps",
+        "p7.b2": "Designed and owned a scalable, extensible client architecture",
+        "p7.b3": "Designed and implemented core gameplay and idle card mechanics",
+        "p7.b4": "Adapted gameplay systems and UI for WebGL and in-chat usage constraints",
+        "p7.b5": "Integrated Telegram Mini App APIs, including platform-specific flows",
+        "p7.b6": "Integrated third-party payment services within the Telegram ecosystem",
+
+        "contact.title": "Contacts",
+        "contact.subtitle": "Message me — I can share more details, demos, or relevant case studies.",
+        "contact.email": "Email",
+        "contact.phone": "Phone",
+        "contact.links": "Links",
+        "contact.note": "I can add a “Download CV (PDF)” button or an “Experience” section if you want.",
+        "contact.quickTitle": "Quick pitch",
+        "contact.quickText": "Unity developer who can own the client end-to-end (architecture → gameplay → performance → release) and speak backend when needed.",
+        "contact.extraTitle": "Optional upgrades",
+        "contact.extra1": "Dark mode toggle",
+        "contact.extra2": "OpenGraph image for nice previews",
+        "contact.extra3": "PDF CV button",
+        "contact.extra4": "Highlights with numbers (if shareable)",
+
+        "footer.up": "Up"
+      }
+    };
+
+    // --- language engine ---
+    const btnUk = document.getElementById("btnUk");
+    const btnEn = document.getElementById("btnEn");
+
+    function setLang(lang) {
+      document.documentElement.lang = lang === "uk" ? "uk" : "en";
+      localStorage.setItem("lang", lang);
+
+      // buttons state
+      btnUk.classList.toggle("btn-dark", lang === "uk");
+      btnUk.classList.toggle("btn-outline-dark", lang !== "uk");
+      btnEn.classList.toggle("btn-dark", lang === "en");
+      btnEn.classList.toggle("btn-outline-dark", lang !== "en");
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        const value = I18N[lang][key];
+        if (typeof value === "string") el.textContent = value;
+      });
+
+      // update page title/description minimally (optional)
+      if (lang === "uk") {
+        document.title = "Артем Лемешев — Unity Developer / Tech Lead";
+      } else {
+        document.title = "Artem Lemeshev — Unity Developer / Tech Lead";
+      }
+    }
+
+    btnUk.addEventListener("click", () => setLang("uk"));
+    btnEn.addEventListener("click", () => setLang("en"));
+
+    // init
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const saved = localStorage.getItem("lang");
+    const initial = saved || (navigator.language && navigator.language.toLowerCase().startsWith("uk") ? "uk" : "en");
+    setLang(initial);
+  </script>
+</body>
+</html>
+        "hero.expBadge": "12+ years of commercial Unity experience",
